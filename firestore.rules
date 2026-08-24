@@ -1,0 +1,13 @@
+rules_version = '2';
+
+// HabitFlow Cloud Sync security rules.
+// 仅允许已登录用户读写自己的 users/{uid} 及其全部子集合（habits / habit_logs / focus_sessions / achievements）。
+// 与 Firebase 控制台测试期规则一致，带鉴权不会过期，可长期部署。
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{uid}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}

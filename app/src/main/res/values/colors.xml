@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- M3 Dynamic Color system - uses Material You palette -->
+    <!-- These are fallback values when dynamic color is not available -->
+
+    <!-- Primary -->
+    <color name="primary">#6750A4</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#EADDFF</color>
+    <color name="on_primary_container">#21005D</color>
+
+    <!-- Secondary -->
+    <color name="secondary">#625B71</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#E8DEF8</color>
+    <color name="on_secondary_container">#1D192B</color>
+
+    <!-- Tertiary -->
+    <color name="tertiary">#7D5260</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="tertiary_container">#FFD8E4</color>
+    <color name="on_tertiary_container">#31111D</color>
+
+    <!-- Background -->
+    <!-- Base tone that user-picked habit card colors are blended toward (see HabitAdapter).
+         White in light mode -> pale pastel cards; values-night overrides it with a dark
+         surface so the tinted cards stop glaring in dark mode. -->
+    <color name="habit_card_tint_base">#FFFFFF</color>
+
+    <color name="background">#FEF7FF</color>
+    <color name="on_background">#1D1B20</color>
+    <color name="surface">#FEF7FF</color>
+    <color name="on_surface">#1D1B20</color>
+    <color name="surface_variant">#E7E0EC</color>
+    <color name="on_surface_variant">#49454F</color>
+
+    <!-- Error -->
+    <color name="error">#B3261E</color>
+    <color name="on_error">#FFFFFF</color>
+
+    <!-- Outline -->
+    <color name="outline">#79747E</color>
+    <color name="outline_variant">#CAC4D0</color>
+
+    <!-- Auth screen dynamic gradient & card (light) -->
+    <color name="auth_grad_start">#6750A4</color>
+    <color name="auth_grad_center">#4A2D82</color>
+    <color name="auth_grad_end">#21005D</color>
+    <color name="auth_card_bg">#FFFFFF</color>
+
+    <!-- Habit color presets -->
+    <color name="habit_purple">#6750A4</color>
+    <color name="habit_blue">#1976D2</color>
+    <color name="habit_green">#388E3C</color>
+    <color name="habit_orange">#F57C00</color>
+    <color name="habit_red">#D32F2F</color>
+    <color name="habit_teal">#00897B</color>
+    <color name="habit_pink">#C2185B</color>
+    <color name="habit_indigo">#303F9F</color>
+
+    <!-- Premium / VIP gold theme -->
+    <color name="gold">#F4C430</color>
+    <color name="gold_dark">#7A4B00</color>
+    <color name="gold_cream">#FCEFD2</color>
+    <color name="gold_brown">#5B3A00</color>
+    <color name="gold_badge_bg">#E9B646</color>
+    <color name="premium_grad_active_start">#8B6320</color>
+    <color name="premium_grad_active_center">#C59A36</color>
+    <color name="premium_grad_active_end">#5D3E15</color>
+    <color name="premium_grad_inactive_start">#FFF8E7</color>
+    <color name="premium_grad_inactive_end">#FBE7C2</color>
+
+</resources>

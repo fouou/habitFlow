@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Colorful gradient checkmark + ring (for the black launcher background) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M54,28a26,26 0,1 0,0.01,0z">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="28"
+                android:startY="28"
+                android:endX="80"
+                android:endY="80"
+                android:startColor="#2979FF"
+                android:centerColor="#AA00FF"
+                android:endColor="#00E5FF" />
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#00000000"
+        android:strokeWidth="9"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M41,55 L51,66 L69,43">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="41"
+                android:startY="55"
+                android:endX="69"
+                android:endY="43"
+                android:startColor="#FF4D9D"
+                android:centerColor="#FFB74D"
+                android:endColor="#69F0AE" />
+        </aapt:attr>
+    </path>
+</vector>

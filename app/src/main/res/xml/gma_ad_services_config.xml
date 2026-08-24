@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AdMob Privacy Sandbox (Android Ad Services / Attribution & Sandboxed APIs) configuration.
+     Required by <property android:name="android.adservices.AD_SERVICES_CONFIG"> in AndroidManifest.xml. -->
+<ad-services-config>
+    <attribution allowAllToAttribution="true"/>
+    <custom-audiences allowAllCustomAudiencesAccess="true"/>
+    <topics allowAllTopicsAccess="true"/>
+</ad-services-config>

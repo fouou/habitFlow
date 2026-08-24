@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single habit row inside the widget ListView. Must avoid app-private ?attr/ refs. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_row"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/widget_row_bg_light"
+    android:paddingHorizontal="14dp">
+
+    <!-- Habit color dot (tinted at runtime from the habit's color) -->
+    <ImageView
+        android:id="@+id/widget_dot"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_circle_solid"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/widget_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="4dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?android:attr/textColorPrimary"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <ImageView
+        android:id="@+id/widget_check"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/ic_check_circle_outline"
+        android:tint="?android:attr/colorAccent" />
+
+</LinearLayout>

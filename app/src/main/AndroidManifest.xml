@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Google Play Billing -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Package visibility: on Android 11+ (targetSdk 31+) GMS (AdMob / measurement /
+         billing) validates the calling package across process boundaries. Without these
+         <queries> the system can't resolve 'com.google.android.gms' as a visible package
+         and throws "SecurityException: Unknown calling package name 'com.google.android.gms'". -->
+    <queries>
+        <package android:name="com.google.android.gms" />
+        <package android:name="com.android.vending" />
+        <package android:name="com.google.android.gsf" />
+    </queries>
+    <!--
+      SCHEDULE_EXACT_ALARM is a special-access permission on Android 12+: declaring it is not
+      enough, the user must enable "Alarms & reminders" in system settings. NotificationHelper
+      checks canScheduleExactAlarms() and falls back to an inexact alarm when it is denied.
+      Note: Google Play restricts this permission to alarm-clock/calendar style apps, so a habit
+      reminder may not qualify for it at review time — the inexact fallback is the safety net.
+    -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".HabitFlowApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_premium"
+        android:roundIcon="@mipmap/ic_launcher_premium_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HabitFlow"
+        android:localeConfig="@xml/locales_config"
+        tools:targetApi="36">
+
+        <!-- AdMob Privacy Sandbox (AD_SERVICES_CONFIG) override to resolve
+             conflict between play-services-ads and play-services-measurement-api -->
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:replace="android:resource" />
+
+        <!-- Main Activity (Single Activity Architecture) -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HabitFlow" />
+
+        <!-- Auth Activity (Launch / Splash screen) -->
+        <activity
+            android:name=".auth.AuthActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HabitFlow.Auth">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Firebase Messaging Service -->
+        <service
+            android:name=".util.FcmMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- App Widget -->
+        <receiver
+            android:name=".widget.HabitWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <!-- Re-render the widget when the system dark/light theme changes. -->
+                <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
+                <action android:name="android.intent.action.UI_MODE_CHANGED" />
+                <!-- Receiving row-toggle clicks from the widget list (fill-in PendingIntent). -->
+                <action android:name="com.fouu.habitflow.widget.TOGGLE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/habit_widget_info" />
+        </receiver>
+
+        <!-- Backing service for the habit widget's scrollable ListView -->
+        <service
+            android:name=".widget.HabitWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <!-- Boot Receiver for alarms -->
+        <receiver
+            android:name=".util.BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Notification Receiver -->
+        <receiver
+            android:name=".util.NotificationReceiver"
+            android:exported="false" />
+
+        <!-- AdMob App ID (debug = test ID, release = real ID via build.gradle manifestPlaceholders) -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="${admobAppId}" />
+
+        <!-- AdMob required activity -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            tools:replace="android:exported" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_habits"
+        android:icon="@drawable/habit__1_"
+        android:title="@string/habits" />
+    <item
+        android:id="@+id/nav_analytics"
+        android:icon="@drawable/table_24px"
+        android:title="@string/analytics" />
+    <item
+        android:id="@+id/nav_focus"
+        android:icon="@drawable/alarm_24px"
+        android:title="@string/focus" />
+    <item
+        android:id="@+id/nav_achievements"
+        android:icon="@drawable/award_star_24px"
+        android:title="@string/achievements" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/settings_24px"
+        android:title="@string/settings" />
+</menu>

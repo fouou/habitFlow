@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Overridden to true in values-night/. Habit card tint colors are picked by the user at
+         runtime (arbitrary hex), so they cannot be expressed as day/night color resources;
+         the adapter has to blend them in code. This flag tells it which way to blend. -->
+    <bool name="is_night_mode">false</bool>
+</resources>

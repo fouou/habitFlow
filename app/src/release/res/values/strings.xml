@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Release-only string overrides.
+  AdMob config is now handled in:
+  - build.gradle → manifestPlaceholders["admobAppId"] (AndroidManifest meta-data)
+  - AdManager.java → BuildConfig.DEBUG selects real vs test ad unit IDs
+--><resources>
+</resources>

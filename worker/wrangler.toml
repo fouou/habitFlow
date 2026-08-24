@@ -1,0 +1,6 @@
+name = "habitflow-ai"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+# Uses the default *.workers.dev subdomain (habitflow.sizhengxu666.workers.dev).
+# No custom routes / KV / D1 needed for the proxy.

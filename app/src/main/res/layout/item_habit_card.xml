@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="12dp"
+    app:strokeWidth="0dp"
+    app:strokeColor="@android:color/transparent"
+    android:id="@+id/card_root">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="22dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="20dp">
+
+        <!-- Habit name -->
+        <TextView
+            android:id="@+id/tv_habit_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cb_today"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tv_habit_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?android:attr/textColorSecondary"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cb_today"
+            app:layout_constraintTop_toBottomOf="@id/tv_habit_name" />
+
+        <!-- Frequency chip (每天 / 工作日 / 每周) -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_frequency"
+            style="@style/Widget.HabitFlow.InfoChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_habit_desc" />
+
+        <!-- Streak chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_streak"
+            style="@style/Widget.HabitFlow.InfoChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/chip_frequency"
+            app:layout_constraintTop_toBottomOf="@id/tv_habit_desc" />
+
+        <!-- Best streak chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_best"
+            style="@style/Widget.HabitFlow.InfoChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/chip_streak"
+            app:layout_constraintTop_toBottomOf="@id/tv_habit_desc" />
+
+        <!-- Next reminder time -->
+        <TextView
+            android:id="@+id/tv_next_reminder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chip_frequency" />
+
+        <!-- Today's checkbox: pure M3 default, zero custom attributes -->
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cb_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

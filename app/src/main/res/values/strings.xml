@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">HabitFlow</string>
+    <string name="widget_title">Today</string>
+    <string name="widget_count">%1$d habits</string>
+    <string name="widget_empty_hint">No habits yet, go add one</string>
+    <string name="app_name_full">HabitFlow – Build Better Habits</string>
+    <string name="auth_tagline">Build better habits, one day at a time</string>
+
+    <!-- Navigation -->
+    <string name="habits">Habits</string>
+    <string name="analytics">Analytics</string>
+    <string name="focus">Focus</string>
+    <string name="settings">Settings</string>
+
+    <!-- Habits -->
+    <string name="add_habit">Add Habit</string>
+    <string name="edit_habit">Edit Habit</string>
+    <string name="delete_habit">Delete Habit</string>
+    <string name="delete_habit_confirm">Delete "%1$s"? This cannot be undone.</string>
+    <string name="habit_name">Habit name</string>
+    <string name="habit_name_required">Please enter a habit name</string>
+    <string name="description_optional">Description (optional)</string>
+    <string name="habit_color">Color</string>
+    <string name="save">Save</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="no_habits_yet">No habits yet</string>
+    <string name="tap_plus_to_add">Tap the + button to add your first habit</string>
+
+    <!-- Frequency -->
+    <string name="daily">Daily</string>
+    <string name="weekdays">Weekdays</string>
+    <string name="weekly">Weekly</string>
+
+    <!-- Reminder -->
+    <string name="reminder">Reminder</string>
+    <string name="reminder_time">Reminder time</string>
+    <string name="reminder_off">Off</string>
+    <string name="next_reminder_at">Next reminder: %1$s</string>
+    <string name="no_reminder">No reminder set</string>
+    <string name="exact_alarm_title">Allow exact reminders?</string>
+    <string name="exact_alarm_message">Android needs the "Alarms &amp; reminders" permission to notify you at the exact time. Without it, reminders still work but may be delayed by a few minutes.</string>
+    <string name="exact_alarm_go_settings">Go to settings</string>
+    <string name="exact_alarm_later">Not now</string>
+
+    <!-- Streak -->
+    <string name="current_streak">Current Streak</string>
+    <string name="best_streak">Best Streak</string>
+    <string name="streak_milestone">🔥 %d-day streak!</string>
+    <string name="best">Best:</string>
+
+    <!-- Stats -->
+    <string name="total_habits">Total Habits</string>
+    <string name="completion_rate">Completion Rate</string>
+    <string name="today_completion_rate">Today</string>
+    <string name="overall_completion_rate">All-time</string>
+    <string name="rate_info_desc">How these stats are calculated</string>
+    <string name="rate_info_title">How stats are calculated</string>
+    <string name="rate_info_content">Today\'s completion rate:\nNumber of habits you should do today AND have completed ÷ number of habits you should do today (based on each habit\'s frequency).
+
+All-time completion rate:\nAcross every habit from its creation date to today, the number of days you actually completed ÷ the number of days you were supposed to (per each habit\'s frequency).
+
+Current streak:\nConsecutive days (ending today, or yesterday if you haven\'t checked in today) on which you completed at least one habit.
+
+Best streak:\nThe longest run of consecutive days in history with at least one completion.
+
+Weekly bars:\nEach of the last 7 days shows its own completion rate (done that day ÷ should-do that day).</string>
+
+    <!-- Focus / Pomodoro -->
+    <string name="focus_time">Focus Time</string>
+    <string name="break_time">Break Time</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="sessions_today">Sessions today: %1$d</string>
+    <string name="sessions_today_0">Sessions today: 0</string>
+    <string name="total_focus_minutes">Total focus: %1$d min</string>
+    <string name="total_focus_minutes_0">Total focus: 0 min</string>
+    <string name="free_limit_warning">Free limit reached (3/day). Upgrade for unlimited!</string>
+    <string name="focus_complete">Focus session complete!</string>
+    <string name="take_break_prompt">Great job! Take a 5-minute break?</string>
+    <string name="start_break">Start Break</string>
+    <string name="close">Close</string>
+    <string name="break_over">Break is over. Ready for another round?</string>
+    <string name="focus_duration_title">Focus length</string>
+    <string name="focus_duration_format">%1$d min</string>
+
+    <!-- Premium / VIP luxury status -->
+    <string name="premium_member_title">Premium Member</string>
+    <string name="premium_upgrade_title">Upgrade to Premium</string>
+    <string name="premium_vip">VIP</string>
+    <string name="premium_perks">Unlocked: unlimited &amp; custom focus · unlimited habits · AI insights</string>
+
+    <!-- Analytics -->
+    <string name="week_view">Week</string>
+    <string name="month_view">Month</string>
+    <string name="select_date">Select date</string>
+    <string name="this_week">This week</string>
+    <string name="this_month">This month</string>
+    <string name="ai_insights">AI Insights</string>
+    <string name="refresh_insights">Refresh Insights</string>
+    <string name="premium_analytics_title">Unlock AI Insights</string>
+    <string name="premium_analytics_desc">Get personalized habit recommendations powered by AI. Understand your patterns and boost your success rate.</string>
+    <string name="unlock_premium">Unlock Premium</string>
+    <string name="ad_load_failed">Ad not ready yet, please try again later</string>
+    <string name="ad_loading">Loading ad…</string>
+    <string name="reward_day_title">Watch ad to unlock 1 day of Premium</string>
+    <string name="reward_day_unlocked">1 day of Premium unlocked!</string>
+    <string name="upgrade_for_ai_insights">Upgrade to Premium to access AI-powered insights!</string>
+    <string name="premium_required">Premium subscription required for AI insights.</string>
+    <string name="ai_insights_unavailable">Insights are currently unavailable. Please contact support.</string>
+    <string name="ai_insights_quota">Today\'s AI quota is used up. Please try again tomorrow.</string>
+
+    <!-- AI insight prompts (sent to the model) -->
+    <string name="ai_insight_system_prompt">You are a professional habit-formation coach who gives concise, encouraging, actionable advice based on the user\'s specific habit data.</string>
+    <string name="ai_insight_user_prompt">Based on the user\'s habit data (JSON), generate personalized insights and advice in concise, encouraging English (2-3 sentences, under 120 words).\n\nUser data (JSON):\n%s\n\nRequirements:\n- Name specific habits from the data (e.g. \"Exercise\", \"Reading\"); don\'t say \"a habit\"\n- Point out 1 highlight and 1 area for improvement\n- Give 1 concrete, actionable suggestion\n- Warm and encouraging tone, like chatting with a friend\n- No markdown, plain text only</string>
+    <string name="ai_insight_parse_error">Failed to parse AI response</string>
+
+    <!-- Premium -->
+    <string name="premium_status">Premium Status</string>
+    <string name="premium_active">✓ Active – Enjoy all features!</string>
+    <string name="premium_inactive">Not active – Upgrade to unlock everything</string>
+    <string name="premium_locked_title">Premium Feature</string>
+    <string name="premium_locked_message">This feature requires a Premium subscription. Upgrade now?</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="not_now">Not Now</string>
+    <string name="monthly_2_99">Monthly $2.99</string>
+    <string name="yearly_14_99">Yearly $14.99 (58% off)</string>
+    <string name="remove_ads_4_99">Remove Ads $4.99</string>
+
+    <!-- Theme -->
+    <string name="theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="dynamic_color">Dynamic Color (Material You)</string>
+    <string name="restart_to_apply">Restart app to apply changes</string>
+
+    <!-- Actions -->
+    <string name="rate_app">Rate on Google Play</string>
+    <string name="feedback">Send Feedback</string>
+    <string name="send_feedback">Send Email</string>
+    <string name="join_qq_group">Join QQ Group</string>
+    <string name="no_email_app">No email app found</string>
+
+    <!-- About -->
+    <string name="about">About</string>
+    <string name="account">Account</string>
+    <string name="account_sync_title">Account &amp; Cloud Sync</string>
+    <string name="account_status_signed_in">● Signed in</string>
+    <string name="account_status_signed_out">○ Signed out</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="no_browser">No browser found</string>
+
+    <!-- Auth -->
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="have_account_sign_in">Already have an account? Sign in</string>
+    <string name="no_account_sign_up">No account? Sign up free</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="fill_all_fields">Please fill all fields</string>
+    <string name="password_too_short">Password must be at least 6 characters</string>
+    <string name="or">OR</string>
+    <string name="sign_in_with_google">Continue with Google</string>
+    <string name="skip">Skip for now</string>
+    <string name="feature_streak">Streak</string>
+    <string name="feature_focus">Focus</string>
+    <string name="feature_premium">Premium</string>
+
+    <!-- Sign Out -->
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_out_confirm">Are you sure you want to sign out?</string>
+    <string name="clear_data_delete_account">Clear data (local + cloud) &amp; delete account</string>
+    <string name="clear_data_confirm_title">Delete account permanently?</string>
+    <string name="clear_data_confirm_message">This will permanently erase your local data, cloud backup, and account. This cannot be undone. Continue?</string>
+    <string name="account_deleted">Account deleted and data cleared</string>
+    <string name="yes">Yes</string>
+    <string name="signed_out">Signed out successfully</string>
+    <string name="signed_in">Signed in</string>
+
+    <!-- Notifications -->
+    <string name="notification_reminder_title">Habit Reminder</string>
+    <string name="notification_reminder_text">Time for "%1$s"!</string>
+
+    <!-- Channels -->
+    <string name="channel_reminder_name">Habit Reminders</string>
+    <string name="channel_reminder_desc">Daily reminders for your habits</string>
+    <string name="channel_focus_name">Focus Timer</string>
+    <string name="channel_achievement_name">Achievements</string>
+
+    <!-- Achievements screen -->
+    <string name="achievements">Achievements</string>
+    <string name="achievement_unlocked">Unlocked</string>
+    <string name="achievement_locked">Locked</string>
+    <string name="achievement_progress">%1$d / %2$d</string>
+    <string name="achievements_empty">Complete habits and focus sessions to earn achievements</string>
+
+    <!-- Achievement names & descriptions (display localization; DB keeps stable English keys) -->
+    <string name="achievement_week_warrior">Week Warrior</string>
+    <string name="achievement_week_warrior_desc">Achieve a 7-day streak</string>
+    <string name="achievement_month_master">Month Master</string>
+    <string name="achievement_month_master_desc">Achieve a 30-day streak</string>
+    <string name="achievement_century_club">Century Club</string>
+    <string name="achievement_century_club_desc">Achieve a 100-day streak</string>
+    <string name="achievement_focus_novice">Focus Novice</string>
+    <string name="achievement_focus_novice_desc">Complete 5 focus sessions</string>
+    <string name="achievement_focus_master">Focus Master</string>
+    <string name="achievement_focus_master_desc">Complete 50 focus sessions</string>
+    <string name="achievement_habit_collector">Habit Collector</string>
+    <string name="achievement_habit_collector_desc">Create 3 different habits</string>
+
+    <!-- Achievements help -->
+    <string name="achievements_help">What are achievements</string>
+    <string name="achievements_help_intro">Complete habits and focus sessions to unlock these achievements:</string>
+
+    <!-- Language -->
+    <string name="language">Language</string>
+    <string name="language_system">System</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_japanese">日本語</string>
+    <string name="language_korean">한국어</string>
+    <string name="language_french">Français</string>
+    <string name="language_german">Deutsch</string>
+    <string name="language_portuguese">Português</string>
+    <string name="language_russian">Русский</string>
+    <string name="language_arabic">العربية</string>
+    <string name="language_hindi">हिन्दी</string>
+    <string name="achievement_unlocked_title">Achievement Unlocked!</string>
+    <string name="achievement_unlocked_msg">%1$s unlocked</string>
+    <string name="achievement_reward_msg">🎉 Achievement "%1$s" unlocked! Reward: %2$d day(s) of Premium</string>
+
+    <!-- Widget -->
+    <string name="widget_description">Quick view of today\'s habits</string>
+    <string name="widget_habit_count">%1$d active habits</string>
+    <string name="add_widget">Add home screen widget</string>
+    <string name="widget_pin_manual">Long-press an empty spot on your home screen, choose \"Widgets\", then pick HabitFlow</string>
+
+    <!-- Notification permission (Settings entry) -->
+    <string name="notification_permission">Notifications</string>
+    <string name="notification_on">Enabled</string>
+    <string name="notification_off">Not allowed — tap to enable</string>
+    <string name="notification_already_on">Notifications are already enabled. To turn them off, open system Settings → Apps → HabitFlow.</string>
+
+    <!-- Misc -->
+    <string name="press_back_again">Press back again to exit</string>
+
+    <!-- Premium features info -->
+    <string name="premium_features_info">高级版包含哪些功能</string>
+    <string name="premium_features_title">高级版包含</string>
+    <string name="premium_features_body">• AI smart habit insights\n• Create unlimited habits (no 3-habit cap)\n• Unlimited focus sessions\n• Custom focus duration\n• Advanced analytics\n• Priority support</string>
+
+    <!-- Cloud Sync -->
+    <string name="cloud_sync_title">Cloud Sync</string>
+    <string name="cloud_sync_desc">Sign in to back up your habits, check-ins, focus sessions and achievements to the cloud. Restore them on any device after reinstall.</string>
+    <string name="cloud_sync_enabled">✓ Synced – Your data is backed up</string>
+    <string name="cloud_sync_disabled">Not backed up – Sign in to enable cloud sync</string>
+    <string name="enable_cloud_sync">Enable Cloud Sync</string>
+    <string name="sync_now">Sync Now</string>
+    <string name="syncing">Syncing…</string>
+    <string name="sync_started">Cloud sync started</string>
+    <string name="reset_cloud_sync">Reset Cloud Sync (clean duplicates)</string>
+    <string name="reset_cloud_confirm">This clears the cloud backup and re-uploads local data to fix duplicate entries. Continue?</string>
+    <string name="reset_cloud_done">Cloud sync reset; duplicates cleaned</string>
+    <string name="last_synced">Last synced: %1$s</string>
+    <string name="never_synced">Not synced yet</string>
+    <string name="sync_failed">Sync failed – tap to retry</string>
+    <string name="sync_failed_detail">Sync failed: %1$s</string>
+
+    <!-- Check-in (note + mood) -->
+
+
+    <!-- Daily target count -->
+    <string name="target_count_label">Daily target</string>
+    <string name="times_unit">times/day</string>
+
+    <!-- Focus breaks & interruptions -->
+    <string name="break_short">Short Break (5 min)</string>
+    <string name="break_long">Long Break (15 min)</string>
+    <string name="log_interruption">Log Interruption</string>
+    <string name="interruptions_format">Interruptions: %1$d</string>
+
+</resources>

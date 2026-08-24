@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- M3 dark baseline surface palette.
+         The Auth theme (Theme.HabitFlow.Auth) references @color/surface,
+         @color/background, @color/on_surface, @color/outline, etc. Without
+         night definitions these fell back to the LIGHT values in values/colors.xml,
+         breaking dark mode on the login screen. -->
+    <color name="background">#1B1B1F</color>
+    <color name="on_background">#E6E1EC</color>
+    <color name="surface">#1B1B1F</color>
+    <color name="on_surface">#E6E1EC</color>
+    <color name="surface_variant">#49454F</color>
+    <color name="on_surface_variant">#CAC4D0</color>
+    <color name="outline">#938F99</color>
+    <color name="outline_variant">#49454F</color>
+    <color name="error">#F2B8B5</color>
+    <color name="on_error">#601410</color>
+
+    <!-- Auth screen dynamic gradient & card (dark) -->
+    <color name="auth_grad_start">#4F378B</color>
+    <color name="auth_grad_center">#2D1B4E</color>
+    <color name="auth_grad_end">#120A26</color>
+    <!-- Elevated surface for the login form card (clearly a card, not pure black) -->
+    <color name="auth_card_bg">#36343B</color>
+
+    <!-- Base tone that user-picked habit card colors are blended toward in dark mode.
+         In light mode HabitAdapter mixes the accent toward white (a pale pastel card);
+         doing that at night produces glaring bright cards, so at night it mixes toward
+         this elevated dark surface instead, keeping only a subtle hint of the hue. -->
+    <color name="habit_card_tint_base">#24232A</color>
+
+    <!-- Premium card gradient (night): deeper espresso-gold so the card stays dark and
+         the light gold text/crown remain legible in dark mode. The day values live in
+         values/colors.xml; this makes the depth follow the system night mode. -->
+    <color name="premium_grad_active_start">#2B1B07</color>
+    <color name="premium_grad_active_center">#4A330F</color>
+    <color name="premium_grad_active_end">#160F04</color>
+
+    <!-- Gold button text (night): keep a brighter gold on the dark card for contrast
+         (the day value in values/colors.xml is deliberately darker). -->
+    <color name="gold_dark">#E0B850</color>
+</resources>

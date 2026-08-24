@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rounded card background for the habit widget (light theme). Concrete color so the
+     launcher host renders the intended shade instead of the framework default white. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#FBFAFE" />
+    <corners android:radius="28dp" />
+</shape>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_habits">
+
+    <fragment
+        android:id="@+id/nav_habits"
+        android:name="com.fouu.habitflow.ui.habits.HabitsFragment"
+        android:label="@string/habits"
+        tools:layout="@layout/fragment_habits" />
+
+    <fragment
+        android:id="@+id/nav_analytics"
+        android:name="com.fouu.habitflow.ui.analytics.AnalyticsFragment"
+        android:label="@string/analytics"
+        tools:layout="@layout/fragment_analytics" />
+
+    <fragment
+        android:id="@+id/nav_focus"
+        android:name="com.fouu.habitflow.ui.focus.FocusFragment"
+        android:label="@string/focus"
+        tools:layout="@layout/fragment_focus" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.fouu.habitflow.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_achievements"
+        android:name="com.fouu.habitflow.ui.achievements.AchievementsFragment"
+        android:label="@string/achievements"
+        tools:layout="@layout/fragment_achievements" />
+
+</navigation>

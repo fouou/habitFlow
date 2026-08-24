@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">习惯流</string>
+    <string name="widget_title">今日习惯</string>
+    <string name="widget_count">%1$d 个习惯</string>
+    <string name="app_name_full">习惯流 – 养成更好的习惯</string>
+    <string name="auth_tagline">日积月累，养成更好的习惯</string>
+
+    <!-- Navigation -->
+    <string name="habits">习惯</string>
+    <string name="analytics">统计</string>
+    <string name="focus">专注</string>
+    <string name="settings">设置</string>
+
+    <!-- Habits -->
+    <string name="add_habit">添加习惯</string>
+    <string name="edit_habit">编辑习惯</string>
+    <string name="delete_habit">删除习惯</string>
+    <string name="delete_habit_confirm">删除“%1$s”？此操作无法撤销。</string>
+    <string name="habit_name">习惯名称</string>
+    <string name="habit_name_required">请输入习惯名称</string>
+    <string name="description_optional">描述（可选）</string>
+    <string name="habit_color">颜色</string>
+    <string name="save">保存</string>
+    <string name="add">添加</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="no_habits_yet">还没有习惯</string>
+    <string name="tap_plus_to_add">点击 + 按钮添加你的第一个习惯</string>
+
+    <!-- Frequency -->
+    <string name="daily">每天</string>
+    <string name="weekdays">工作日</string>
+    <string name="weekly">每周</string>
+
+    <!-- Reminder -->
+    <string name="reminder">提醒</string>
+    <string name="reminder_time">提醒时间</string>
+    <string name="reminder_off">关闭</string>
+    <string name="next_reminder_at">下次提醒：%1$s</string>
+    <string name="no_reminder">未设置提醒</string>
+    <string name="exact_alarm_title">允许精确提醒？</string>
+    <string name="exact_alarm_message">Android 需要「闹钟和提醒」权限才能在准点提醒你。不开启也能收到提醒，但可能会延迟几分钟。</string>
+    <string name="exact_alarm_go_settings">去设置</string>
+    <string name="exact_alarm_later">暂不</string>
+
+    <!-- Streak -->
+    <string name="current_streak">当前连续</string>
+    <string name="best_streak">最佳连续</string>
+    <string name="streak_milestone">🔥 连续 %d 天！</string>
+    <string name="best">最佳：</string>
+
+    <!-- Stats -->
+    <string name="total_habits">习惯总数</string>
+    <string name="completion_rate">完成率</string>
+    <string name="today_completion_rate">今日</string>
+    <string name="overall_completion_rate">累计</string>
+    <string name="rate_info_desc">这些统计怎么算的</string>
+    <string name="rate_info_title">统计计算说明</string>
+    <string name="rate_info_content">今日完成率：\n今天"该打卡且已完成"的习惯数 ÷ 今天"该打卡"的习惯总数（是否该打卡按每个习惯的频率判断）。
+
+累计完成率：\n从每个习惯的创建日算到今天，所有"该打卡"的天数里，实际打了卡的天数 ÷ 总"该打卡"天数（按各习惯频率分别累计）。
+
+当前连续：\n从今天（若今天还没打卡则从昨天）往前数，连续每天至少完成一个习惯的天数。
+
+最佳连续：\n历史最长的一段"每天至少完成一个习惯"的连续天数。
+
+每周柱状图：\n过去 7 天，每天各自的完成率（当天已完成 ÷ 当天该打卡）。</string>
+
+    <!-- Focus / Pomodoro -->
+    <string name="focus_time">专注时间</string>
+    <string name="break_time">休息时间</string>
+    <string name="start">开始</string>
+    <string name="pause">暂停</string>
+    <string name="reset">重置</string>
+    <string name="sessions_today">今日次数：%1$d</string>
+    <string name="sessions_today_0">今日次数：0</string>
+    <string name="total_focus_minutes">专注总计：%1$d 分钟</string>
+    <string name="total_focus_minutes_0">专注总计：0 分钟</string>
+    <string name="free_limit_warning">已达免费上限（每天 3 次）。升级解锁无限制！</string>
+    <string name="focus_complete">专注完成！</string>
+    <string name="take_break_prompt">做得好！休息 5 分钟吗？</string>
+    <string name="start_break">开始休息</string>
+    <string name="close">关闭</string>
+    <string name="break_over">休息结束。准备好再来一轮了吗？</string>
+    <string name="focus_duration_title">专注时长</string>
+    <string name="focus_duration_format">%1$d 分钟</string>
+
+    <!-- Premium / VIP 奢华状态 -->
+    <string name="premium_member_title">尊享会员</string>
+    <string name="premium_upgrade_title">升级到尊享会员</string>
+    <string name="premium_vip">VIP</string>
+    <string name="premium_perks">已解锁：无限专注 · 自定义时长 · 无限习惯 · AI 洞察</string>
+
+    <!-- Analytics -->
+    <string name="week_view">周</string>
+    <string name="month_view">月</string>
+    <string name="select_date">选择日期</string>
+    <string name="this_week">本周</string>
+    <string name="this_month">本月</string>
+    <string name="ai_insights">AI 洞察</string>
+    <string name="refresh_insights">刷新洞察</string>
+    <string name="premium_analytics_title">解锁 AI 洞察</string>
+    <string name="premium_analytics_desc">获取 AI 提供的个性化习惯建议，了解你的规律，提升成功率。</string>
+    <string name="unlock_premium">解锁高级版</string>
+    <string name="ad_load_failed">广告暂未准备好，请稍后再试</string>
+    <string name="ad_loading">广告加载中…</string>
+    <string name="reward_day_title">看广告解锁 1 天会员</string>
+    <string name="reward_day_unlocked">已解锁 1 天会员！</string>
+    <string name="upgrade_for_ai_insights">升级到高级版即可使用 AI 洞察！</string>
+    <string name="premium_required">AI 洞察需要高级版订阅。</string>
+    <string name="ai_insights_unavailable">洞察当前不可用，请联系客服。</string>
+    <string name="ai_insights_quota">今日 AI 额度已用尽，请明天再试。</string>
+
+    <!-- AI 洞察提示词（发送给模型） -->
+    <string name="ai_insight_system_prompt">你是一个专业的习惯养成教练，擅长结合用户的具体习惯数据，用简洁、鼓励的中文给出可执行的建议。</string>
+    <string name="ai_insight_user_prompt">请根据以下用户的习惯数据（JSON），用简洁、鼓励的中文（2-3句话，不超过120字）生成个性化洞察和建议。\n\n用户数据（JSON）:\n%s\n\n要求：\n- 必须点名数据里的具体习惯名称（如"运动""读书"），不要只说"某个习惯"\n- 指出1个亮点和1个可改进点\n- 给出1条具体可行的建议\n- 语气温暖鼓励，像朋友聊天\n- 不要用markdown格式，直接输出纯文本</string>
+    <string name="ai_insight_parse_error">解析AI响应失败</string>
+
+    <!-- Premium -->
+    <string name="premium_status">高级版状态</string>
+    <string name="premium_active">✓ 已激活 – 畅享所有功能！</string>
+    <string name="premium_inactive">未激活 – 升级解锁全部功能</string>
+    <string name="premium_locked_title">高级版功能</string>
+    <string name="premium_locked_message">此功能需要高级版订阅。现在升级？</string>
+    <string name="upgrade">升级</string>
+    <string name="not_now">暂不</string>
+    <string name="monthly_2_99">月度 $2.99</string>
+    <string name="yearly_14_99">年度 $14.99（省 58%）</string>
+    <string name="remove_ads_4_99">去除广告 $4.99</string>
+
+    <!-- Premium features info -->
+    <string name="premium_features_info">高级版包含哪些功能</string>
+    <string name="premium_features_title">高级版包含</string>
+    <string name="premium_features_body">• AI 智能习惯洞察\n• 无限创建习惯，不再受 3 个数量上限限制\n• 无限次专注时段\n• 自定义专注时长\n• 高级数据分析\n• 优先客服支持</string>
+
+    <!-- Theme -->
+    <string name="theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="dynamic_color">动态配色（Material You）</string>
+    <string name="restart_to_apply">重启应用以生效</string>
+
+    <!-- Actions -->
+    <string name="rate_app">在 Google Play 上评分</string>
+    <string name="feedback">反馈意见</string>
+    <string name="send_feedback">发送邮件</string>
+    <string name="join_qq_group">加入 QQ 群</string>
+    <string name="no_email_app">未找到邮件应用</string>
+
+    <!-- About -->
+    <string name="about">关于</string>
+    <string name="account">账号</string>
+    <string name="account_sync_title">账号与云同步</string>
+    <string name="account_status_signed_in">● 已登录</string>
+    <string name="account_status_signed_out">○ 未登录</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="terms_of_service">服务条款</string>
+    <string name="no_browser">未找到浏览器</string>
+
+    <!-- Auth -->
+    <string name="sign_in">登录</string>
+    <string name="create_account">创建账户</string>
+    <string name="have_account_sign_in">已有账户？去登录</string>
+    <string name="no_account_sign_up">没有账户？免费注册</string>
+    <string name="email">邮箱</string>
+    <string name="password">密码</string>
+    <string name="fill_all_fields">请填写所有字段</string>
+    <string name="password_too_short">密码至少需要 6 个字符</string>
+    <string name="or">或</string>
+    <string name="sign_in_with_google">使用 Google 登录</string>
+    <string name="skip">暂不登录</string>
+    <string name="widget_empty_hint">还没有习惯，去添加吧</string>
+    <string name="feature_streak">坚持</string>
+    <string name="feature_focus">专注</string>
+    <string name="feature_premium">会员</string>
+
+    <!-- Sign Out -->
+    <string name="sign_out">退出登录</string>
+    <string name="sign_out_confirm">确定要退出登录吗？</string>
+    <string name="clear_data_delete_account">清空数据（本地+云端）并注销账号</string>
+    <string name="clear_data_confirm_title">永久注销账号？</string>
+    <string name="clear_data_confirm_message">这将永久删除你的本地数据、云端备份和账号，且无法恢复。确定继续吗？</string>
+    <string name="account_deleted">账号已注销，数据已清空</string>
+    <string name="yes">是</string>
+    <string name="signed_out">已成功退出登录</string>
+    <string name="signed_in">已登录</string>
+
+    <!-- Notifications -->
+    <string name="notification_reminder_title">习惯提醒</string>
+    <string name="notification_reminder_text">该完成“%1$s”啦！</string>
+
+    <!-- Channels -->
+    <string name="channel_reminder_name">习惯提醒</string>
+    <string name="channel_reminder_desc">习惯的每日提醒</string>
+    <string name="channel_focus_name">专注计时</string>
+    <string name="channel_achievement_name">成就</string>
+
+    <!-- Achievements screen -->
+    <string name="achievements">成就</string>
+    <string name="achievement_unlocked">已解锁</string>
+    <string name="achievement_locked">未解锁</string>
+    <string name="achievement_progress">%1$d / %2$d</string>
+    <string name="achievements_empty">完成习惯打卡和专注时段来解锁成就</string>
+
+    <!-- 成就名称与描述（显示层本地化；数据库仍存英文规范键） -->
+    <string name="achievement_week_warrior">周冠军</string>
+    <string name="achievement_week_warrior_desc">达成 7 天连续打卡</string>
+    <string name="achievement_month_master">月度大师</string>
+    <string name="achievement_month_master_desc">达成 30 天连续打卡</string>
+    <string name="achievement_century_club">百天俱乐部</string>
+    <string name="achievement_century_club_desc">达成 100 天连续打卡</string>
+    <string name="achievement_focus_novice">专注新手</string>
+    <string name="achievement_focus_novice_desc">完成 5 次专注时段</string>
+    <string name="achievement_focus_master">专注大师</string>
+    <string name="achievement_focus_master_desc">完成 50 次专注时段</string>
+    <string name="achievement_habit_collector">习惯收藏家</string>
+    <string name="achievement_habit_collector_desc">创建 3 个不同习惯</string>
+
+    <!-- Achievements help -->
+    <string name="achievements_help">成就说明</string>
+    <string name="achievements_help_intro">完成习惯打卡与专注时段，即可解锁以下成就：</string>
+
+    <!-- Language -->
+    <string name="language">语言</string>
+    <string name="language_system">跟随系统</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_japanese">日本語</string>
+    <string name="language_korean">한국어</string>
+    <string name="language_french">Français</string>
+    <string name="language_german">Deutsch</string>
+    <string name="language_portuguese">Português</string>
+    <string name="language_russian">Русский</string>
+    <string name="language_arabic">العربية</string>
+    <string name="language_hindi">हिन्दी</string>
+    <string name="achievement_unlocked_title">成就解锁！</string>
+    <string name="achievement_unlocked_msg">%1$s 已解锁</string>
+    <string name="achievement_reward_msg">🎉 解锁成就「%1$s」！奖励 %2$d 天会员</string>
+
+    <!-- Widget -->
+    <string name="widget_description">今日习惯速览</string>
+    <string name="widget_habit_count">%1$d 个进行中的习惯</string>
+    <string name="add_widget">添加桌面小组件</string>
+    <string name="widget_pin_manual">长按主屏幕空白处，选择“小组件”，然后添加 HabitFlow</string>
+
+    <!-- Notification permission (Settings entry) -->
+    <string name="notification_permission">通知</string>
+    <string name="notification_on">已开启</string>
+    <string name="notification_off">未授权 — 点击开启</string>
+    <string name="notification_already_on">通知已开启。如需关闭，请到系统设置 → 应用 → HabitFlow 中操作。</string>
+
+    <!-- Misc -->
+    <string name="press_back_again">再按一次返回退出</string>
+
+    <!-- Cloud Sync -->
+    <string name="cloud_sync_title">云端同步</string>
+    <string name="cloud_sync_desc">登录后可将你的习惯、打卡、专注记录和成就备份到云端，重装或换设备后随时恢复。</string>
+    <string name="cloud_sync_enabled">✓ 已同步 – 数据已备份</string>
+    <string name="cloud_sync_disabled">未备份 – 登录以开启云端同步</string>
+    <string name="enable_cloud_sync">开启云端同步</string>
+    <string name="sync_now">立即同步</string>
+    <string name="syncing">同步中…</string>
+    <string name="sync_started">已开始云端同步</string>
+    <string name="reset_cloud_sync">重置云同步（清理重复数据）</string>
+    <string name="reset_cloud_confirm">这将清除云端备份并重新上传本机数据，用于修复"重复条目"问题。确定继续？</string>
+    <string name="reset_cloud_done">云同步已重置，重复数据已清理</string>
+    <string name="last_synced">上次同步：%1$s</string>
+    <string name="never_synced">尚未同步</string>
+    <string name="sync_failed">同步失败 – 点击重试</string>
+    <string name="sync_failed_detail">同步失败：%1$s</string>
+
+    <!-- 打卡（备注 + 心情） -->
+
+
+    <!-- 每天目标次数 -->
+    <string name="target_count_label">每天目标次数</string>
+    <string name="times_unit">次/天</string>
+
+    <!-- 专注休息与打断 -->
+    <string name="break_short">短休息（5 分钟）</string>
+    <string name="break_long">长休息（15 分钟）</string>
+    <string name="log_interruption">记录打断</string>
+    <string name="interruptions_format">打断：%1$d 次</string>
+
+</resources>

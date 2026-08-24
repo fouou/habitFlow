@@ -1,0 +1,127 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.fouu.habitflow'
+    compileSdk 37
+
+    defaultConfig {
+        applicationId "com.fouu.habitflow"
+        minSdk 24
+        targetSdk 37
+        versionCode 2
+        versionName "1.1.0"
+        // AdMob App ID used in AndroidManifest via ${admobAppId}.
+        // Default = Google test App ID (debug). Overridden in release build type below.
+        manifestPlaceholders["admobAppId"] = "ca-app-pub-3940256099942544~3347511713"
+
+        // Gemini API Key (AI insights). Replace with your real key from Google AI Studio.
+        buildConfigField "String", "GEMINI_API_KEY", "\"${project.findProperty('geminiApiKey') ?: 'YOUR_GEMINI_API_KEY'}\""
+        // HabitFlow Cloudflare Worker (AI insights backend, proxies DeepSeek). The worker holds
+        // the real DeepSeek key server-side; the app only knows its own worker token + URL.
+        buildConfigField "String", "WORKER_API_TOKEN", "\"${project.findProperty('workerApiToken') ?: 'YOUR_WORKER_API_TOKEN'}\""
+        buildConfigField "String", "WORKER_BASE_URL", "\"${project.findProperty('workerBaseUrl') ?: 'https://habitflow.sizhengxu666.workers.dev/chat/completions'}\""
+
+        // UIAutomator 插桩测试的运行器（androidTest 用）
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // Real AdMob App ID from https://apps.admob.com
+            manifestPlaceholders["admobAppId"] = "ca-app-pub-2249836449257664~8576749150"
+            // Real banner ad unit ID (overrides the test value in strings.xml)
+            resValue "string", "banner_ad_unit_id", "ca-app-pub-2249836449257664/7089096029"
+        }
+        debug {
+            minifyEnabled false
+            // Use Google test banner ad unit ID
+            resValue "string", "banner_ad_unit_id", "ca-app-pub-3940256099942544/6300978111"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    packaging {
+        resources {
+            excludes += ['/META-INF/{AL2.0,LGPL2.1}']
+        }
+    }
+}
+
+dependencies {
+    // AndroidX Core & Lifecycle
+    implementation 'androidx.core:core:1.19.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.11.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.11.0'
+
+    // Material 3
+    implementation 'com.google.android.material:material:1.14.0'
+
+    // Navigation
+    implementation 'androidx.navigation:navigation-fragment:2.9.8'
+    implementation 'androidx.navigation:navigation-ui:2.9.8'
+
+    // Room Database
+    implementation 'androidx.room:room-runtime:2.8.4'
+    annotationProcessor 'androidx.room:room-compiler:2.8.4'
+
+    // OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+
+    // Gson
+    implementation 'com.google.code.gson:gson:2.14.0'
+
+    // Firebase (BOM 统一管理版本)
+    implementation platform('com.google.firebase:firebase-bom:34.17.0')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
+
+    // Play Services 基础库（防止 Firebase / AdMob 版本冲突）
+    implementation 'com.google.android.gms:play-services-base:18.10.0'
+
+    // Google Sign-In (required by AuthManager)
+    implementation 'com.google.android.gms:play-services-auth:21.6.0'
+
+    // AdMob
+    implementation 'com.google.android.gms:play-services-ads:24.5.0'
+
+    // Billing
+    implementation 'com.android.billingclient:billing:9.0.0'
+
+    // RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+
+    // SwipeRefreshLayout (used in HabitsFragment)
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    // AndroidX Preference (provides androidx.preference.PreferenceManager)
+    implementation 'androidx.preference:preference:1.2.1'
+
+    // ConstraintLayout
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+
+    // ===== UIAutomator 插桩测试（androidTest）=====
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test:rules:1.6.2'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.3.0'
+}

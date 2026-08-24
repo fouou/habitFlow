@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Outer bright-gold ring -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M1,12 a11,11 0 1 0 22,0 a11,11 0 1 0 -22,0 Z" />
+    <!-- Inner deep-gold disc -->
+    <path
+        android:fillColor="#6E4B16"
+        android:pathData="M3,12 a9,9 0 1 0 18,0 a9,9 0 1 0 -18,0 Z" />
+    <!-- Highlight ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFE082"
+        android:strokeWidth="0.8"
+        android:pathData="M3,12 a9,9 0 1 0 18,0 a9,9 0 1 0 -18,0 Z" />
+    <!-- Crown (light gold) -->
+    <path
+        android:fillColor="#FFE082"
+        android:pathData="M4,16.8 L4,9.6 Q4,8.6 5,8.9 L8.2,11 L11.4,5.7 Q12,4.5 12.6,5.7 L15.8,11 L19,8.9 Q20,8.6 20,9.6 L20,16.8 Q20,17.4 19.4,17.4 L4.6,17.4 Q4,17.4 4,16.8 Z" />
+    <!-- Jewel -->
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M10.2,4.6 a1.8,1.8 0 1 0 3.6,0 a1.8,1.8 0 1 0 -3.6,0 Z" />
+</vector>

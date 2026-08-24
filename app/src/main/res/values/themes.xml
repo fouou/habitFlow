@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common base: all color/typography. windowLightStatusBar is split by day/night
+         because the status-bar background is light in day (needs dark icons) and dark in night. -->
+    <style name="Theme.HabitFlow.Base" parent="Theme.Material3.DynamicColors.DayNight">
+        <!-- Remove default system ActionBar (we use our own MaterialToolbar) -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Colors will be overridden by DynamicColors API at runtime -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+
+        <!-- Status bar background follows surface -->
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- Typography -->
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.HabitFlow.DisplayLarge</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.HabitFlow.HeadlineSmall</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.HabitFlow.TitleMedium</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.HabitFlow.BodyMedium</item>
+    </style>
+
+    <!-- Day: light surface status bar → dark icons -->
+    <style name="Theme.HabitFlow" parent="Theme.HabitFlow.Base">
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Typography styles (M3 scale) -->
+    <style name="TextAppearance.HabitFlow.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge"/>
+    <style name="TextAppearance.HabitFlow.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall"/>
+    <style name="TextAppearance.HabitFlow.TitleMedium" parent="TextAppearance.Material3.TitleMedium"/>
+    <style name="TextAppearance.HabitFlow.BodyMedium" parent="TextAppearance.Material3.BodyMedium"/>
+
+    <!-- Splash/Launch theme -->
+    <style name="Theme.HabitFlow.Launch" parent="Theme.HabitFlow">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+    <!-- Gold button family for the premium/luxury card (theme-independent, matches the
+         gold card so the buttons don't clash with the app's purple M3 primary). -->
+    <style name="Widget.HabitFlow.GoldButton.Filled" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/gold</item>
+        <item name="android:textColor">@color/gold_brown</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="Widget.HabitFlow.GoldButton.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/gold</item>
+        <item name="android:textColor">@color/gold_dark</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- White button family for the colorful premium card (high-contrast on the gradient). -->
+    <style name="Widget.HabitFlow.ColorButton.Filled" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:textColor">#4527A0</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="Widget.HabitFlow.ColorButton.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- Habit-card info chips (frequency / streak / best): theme-consistent display chips.
+         Sizing + disabled interaction live here; the per-habit accent tint is applied at
+         runtime in HabitAdapter (overrides these defaults). -->
+    <style name="Widget.HabitFlow.InfoChip" parent="Widget.Material3.Chip.Assist">
+        <item name="android:checkable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="chipMinHeight">28dp</item>
+        <item name="chipStartPadding">12dp</item>
+        <item name="chipEndPadding">12dp</item>
+        <item name="chipCornerRadius">14dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Auth screen theme (day) -->
+    <style name="Theme.HabitFlow.Auth" parent="Theme.HabitFlow">
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>
