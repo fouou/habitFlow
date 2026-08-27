@@ -30,8 +30,10 @@ $RECYCLE.BIN/
 .codebuddy/
 
 # ===== 项目根目录的垃圾文件 =====
-# 构建/崩溃/widget 日志、堆转储、截图、异常文件
+# 构建/崩溃/widget 日志、堆转储、截图、异常文件、误建文案
 /*.txt
+!/app-ads.txt
+/play-store-listing.md
 /*.png
 /*.jpg
 /$null
